@@ -46,11 +46,7 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    "@nuxtjs/vuetify",
-    "@aceforth/nuxt-optimized-images",
-    "@nuxtjs/google-analytics",
-  ],
+  buildModules: ["@nuxtjs/vuetify", "@aceforth/nuxt-optimized-images"],
   optimizedImages: {
     optimizeImages: true,
   },
