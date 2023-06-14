@@ -82,13 +82,13 @@ export default {
     UserAgent: "Bingbot",
     Disallow: "/admin",
   },
-  axios: {
-    proxy: true,
-    baseURL: URL,
-  },
-  proxy: {
-    "/api": URL,
-  },
+  // axios: {
+  //   proxy: true,
+  //   baseURL: URL,
+  // },
+  // proxy: {
+  //   "/api": URL,
+  // },
   auth: {
     redirect: {
       login: "/admin",
