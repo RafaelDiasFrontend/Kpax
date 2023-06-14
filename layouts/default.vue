@@ -10,14 +10,7 @@
       >
         <v-toolbar-title style="width: 300px" class="ml-1 ml-md-12 pl-md-4">
           <div
-            class="
-              font-weight-bold
-              grey--text
-              text--lighten-3
-              letter-spacing-2
-              text-initial
-              pr-2
-            "
+            class="font-weight-bold grey--text text--lighten-3 letter-spacing-2 text-initial pr-2"
           >
             <a href="#hero-img" v-smooth-scroll="{ duration: 2000 }">
               <div class="text-logo grey--text text--lighten-2">Kpax</div>
@@ -100,11 +93,9 @@
           >
             <template v-slot:activator>
               <v-list-item>
-                <v-list-item-content>
-                  <v-list-item-title>
-                    {{ item.text }}
-                  </v-list-item-title>
-                </v-list-item-content>
+                <v-list-item-title>
+                  {{ item.text }}
+                </v-list-item-title>
               </v-list-item>
             </template>
             <v-list-item
@@ -117,22 +108,19 @@
               <v-list-item-action v-if="child.icon">
                 <v-icon>{{ child.icon }}</v-icon>
               </v-list-item-action>
-              <v-list-item-content>
-                <v-list-item-title>
-                  {{ child.text }}
-                </v-list-item-title>
-              </v-list-item-content>
+
+              <v-list-item-title>
+                {{ child.text }}
+              </v-list-item-title>
             </v-list-item>
           </v-list-group>
           <v-list-item v-else :key="item.text" router :to="item.route">
             <v-list-item-action>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-action>
-            <v-list-item-content>
-              <v-list-item-title>
-                {{ item.text }}
-              </v-list-item-title>
-            </v-list-item-content>
+            <v-list-item-title>
+              {{ item.text }}
+            </v-list-item-title>
           </v-list-item>
         </template>
       </v-list>
@@ -175,8 +163,6 @@ export default {
     dialog: false,
     themePrimary: true,
     themeDark: false,
-
-    themePrimary: true,
     drawer: false,
     slugs: "",
 
