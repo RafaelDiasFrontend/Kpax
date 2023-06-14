@@ -50,9 +50,6 @@ export default {
   optimizedImages: {
     optimizeImages: true,
   },
-  googleAnalytics: {
-    id: "UA-91059521-1",
-  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
