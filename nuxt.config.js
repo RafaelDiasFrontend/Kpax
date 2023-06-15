@@ -53,7 +53,6 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    "@nuxtjs/axios",
     "@nuxtjs/pwa",
     "@nuxtjs/auth",
     "@nuxtjs/robots",
@@ -75,35 +74,7 @@ export default {
     UserAgent: "Bingbot",
     Disallow: "/admin",
   },
-  axios: {
-    proxy: true,
-    baseURL: URL,
-  },
-  proxy: {
-    "/api": URL,
-  },
-  auth: {
-    redirect: {
-      login: "/admin",
-      logout: "/",
-      callback: "/login",
-      home: false,
-    },
-    strategies: {
-      local: {
-        endpoints: {
-          login: {
-            url: "api/auth/login",
-            method: "post",
-            propertyName: "token",
-          },
-          logout: true,
 
-          user: { method: "get", propertyName: false },
-        },
-      },
-    },
-  },
   vuetify: {
     customVariables: ["~/assets/variables.scss"],
     theme: {
