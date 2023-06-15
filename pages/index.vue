@@ -69,7 +69,6 @@ export default {
       ],
     };
   },
-
   data() {
     return {
       structuredData: {
@@ -104,27 +103,6 @@ export default {
     };
   },
 
-  async asyncData({ $axios }) {
-    try {
-      let testimonials = $axios.$get("/api/testimonials");
-      let products = $axios.$get("/api/products");
-      let clients = $axios.$get("/api/clients");
-
-      const [testResponse, prodResponse, clientsResponse] = await Promise.all([
-        testimonials,
-        products,
-        clients,
-      ]);
-      console.log([testResponse, prodResponse, clientsResponse]);
-      return {
-        testimonials: testResponse.testimonials,
-        products: prodResponse.products,
-        clients: clientsResponse.portfolio,
-      };
-    } catch (err) {
-      console.log(err);
-    }
-  },
   methods: {
     async addToNewsletter() {
       try {
