@@ -1,33 +1,13 @@
 <template>
-  <div class="">
-    <HeroImgFull />
-    <About />   
-    <Contact />
-    <!-- <Services :allTestimonials="testimonials"/> -->
-    <Portfolio :allPortfolio="clients" />
-    <Testimonials :allTestimonials="testimonials" />
-    <Team :allPortfolio="clients" />
-    <!-- <Blog :allPosts='products' /> -->
-    <!-- <Newsletter01 /> -->
-  </div>
+  <div class="">server erro o teu cu</div>
 </template>
 
 <script>
-import HeroImgFull from "@/components/Home/HeroImgFull";
-import Contact from "@/components/Home/Contact";
-import IconsHome from "@/components/Home/IconsHome";
-import About from "@/components/Home/About";
-import Services from "@/components/Home/Services";
-import Team from '@/components/Home/Team'
-import Testimonials from "@/components/Home/Testimonials";
-import Newsletter01 from "@/components/Forms/Newsletter01";
-import Portfolio from "@/components/Home/Portfolio";
-import Blog from "@/components/Home/Blog";
 export default {
   head() {
     return {
       script: [{ type: "application/ld+json", json: this.structuredData }],
-      title: this.title,    
+      title: this.title,
       image: this.image,
       link: [
         {
@@ -89,18 +69,7 @@ export default {
       ],
     };
   },
-  components: {
-    IconsHome,
-    HeroImgFull,
-    Services,
-    Testimonials,
-    About,
-    Contact,    
-    Portfolio,
-    Blog,
-    Newsletter01,
-    Team
-  },
+
   data() {
     return {
       structuredData: {
@@ -110,7 +79,8 @@ export default {
       },
       title: "Agência de Marketing Digital Santos",
       image: "https://kpaxexperience.s3.amazonaws.com/kpax.jpg",
-      description: "Agência kpax é uma empresa de marketing digital, nossos principais serviços são: Site, Loja Virtual, SEO, Marketing Digital e Podcast, entre e confira os nossos projetos",         
+      description:
+        "Agência kpax é uma empresa de marketing digital, nossos principais serviços são: Site, Loja Virtual, SEO, Marketing Digital e Podcast, entre e confira os nossos projetos",
       testimonials: [],
       products: [],
       clients: [],
@@ -134,7 +104,6 @@ export default {
     };
   },
 
-  
   async asyncData({ $axios }) {
     try {
       let testimonials = $axios.$get("/api/testimonials");
